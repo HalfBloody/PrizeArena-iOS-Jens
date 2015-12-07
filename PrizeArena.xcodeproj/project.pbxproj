@@ -31,6 +31,13 @@
 		A46E81361C11CD7300FA984C /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E81351C11CD7300FA984C /* ObjectMapper.framework */; };
 		A46E81371C11CD7300FA984C /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46E81351C11CD7300FA984C /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46E813D1C11CD8900FA984C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46E813B1C11CD8900FA984C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46F383B1C14FD9200313772 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F383A1C14FD9200313772 /* Prize.swift */; };
+		A46F383E1C15BBCA00313772 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F383D1C15BBCA00313772 /* FBSDKCoreKit.framework */; };
+		A46F38401C15BBD000313772 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */; };
+		A46F38421C15BBDA00313772 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */; };
+		A46F38441C15BBE000313772 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F38431C15BBE000313772 /* FBSDKShareKit.framework */; };
+		A4AE7C941C1483710053CBED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FFA1C11AA3B00C29345 /* RealmSwift.framework */; };
+		A4AE7C951C1483780053CBED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E81231C11CC6100FA984C /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +90,12 @@
 		A46E81351C11CD7300FA984C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		A46E81381C11CD8400FA984C /* SugarRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SugarRecord.framework; path = Carthage/Build/iOS/SugarRecord.framework; sourceTree = "<group>"; };
 		A46E813B1C11CD8900FA984C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		A46F383A1C14FD9200313772 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prize.swift; path = ../Prize.swift; sourceTree = "<group>"; };
+		A46F383C1C15BAFA00313772 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		A46F383D1C15BBCA00313772 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		A46F38431C15BBE000313772 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +108,14 @@
 				A46E812D1C11CD5400FA984C /* AlamofireObjectMapper.framework in Frameworks */,
 				A46E81361C11CD7300FA984C /* ObjectMapper.framework in Frameworks */,
 				A46E811F1C11CC5200FA984C /* Kingfisher.framework in Frameworks */,
+				A4AE7C951C1483780053CBED /* Realm.framework in Frameworks */,
+				A4AE7C941C1483710053CBED /* RealmSwift.framework in Frameworks */,
 				A46E81201C11CC5700FA984C /* MagicalRecord.framework in Frameworks */,
 				A46E81291C11CD2F00FA984C /* Alamofire.framework in Frameworks */,
+				A46F383E1C15BBCA00313772 /* FBSDKCoreKit.framework in Frameworks */,
+				A46F38441C15BBE000313772 /* FBSDKShareKit.framework in Frameworks */,
+				A46F38421C15BBDA00313772 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				A46F38401C15BBD000313772 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +125,7 @@
 		A4405FC41C119FE100C29345 = {
 			isa = PBXGroup;
 			children = (
+				A46F383C1C15BAFA00313772 /* Bridging-Header.h */,
 				A46E813B1C11CD8900FA984C /* SwiftyJSON.framework */,
 				A46E81381C11CD8400FA984C /* SugarRecord.framework */,
 				A46E81351C11CD7300FA984C /* ObjectMapper.framework */,
@@ -149,6 +169,7 @@
 		A4405FE91C11A62A00C29345 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A46F383A1C14FD9200313772 /* Prize.swift */,
 				A4405FE71C11A61E00C29345 /* User.swift */,
 			);
 			name = Models;
@@ -173,6 +194,10 @@
 		A44060001C11AC4400C29345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A46F38431C15BBE000313772 /* FBSDKShareKit.framework */,
+				A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */,
+				A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */,
+				A46F383D1C15BBCA00313772 /* FBSDKCoreKit.framework */,
 				A46E81231C11CC6100FA984C /* Realm.framework */,
 				A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */,
 				A4405FFE1C11AA4100C29345 /* SwiftyJSON.framework */,
@@ -206,6 +231,7 @@
 				A4405FCA1C119FE100C29345 /* Frameworks */,
 				A4405FCB1C119FE100C29345 /* Resources */,
 				A46E812B1C11CD3100FA984C /* Embed Frameworks */,
+				A4AE7C961C1483A10053CBED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -263,11 +289,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A4AE7C961C1483A10053CBED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4405FC91C119FE100C29345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46F383B1C14FD9200313772 /* Prize.swift in Sources */,
 				A4405FE81C11A61E00C29345 /* User.swift in Sources */,
 				A4405FD91C119FE100C29345 /* PrizeArena.xcdatamodeld in Sources */,
 				A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */,
@@ -388,11 +433,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					/Users/jensdisselhoff/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PrizeArena/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gemsters.PrizeArena;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oll.PrizeArena;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -403,11 +450,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					/Users/jensdisselhoff/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PrizeArena/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gemsters.PrizeArena;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oll.PrizeArena;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;
 		};

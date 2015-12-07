@@ -11,51 +11,29 @@ import Foundation
 import AdSupport
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 
-class User {
+class User : Object {
     static let sharedInstance = User()
     
-    var fb_token:String?
-    var token:String?
-    var idfa_enabled:Bool?
-    var IDFA:String?
-    var os_version:String?
-    var device_kind:String?
-    var platform:String?
-    var bubbles: Int?
-    var state: String?
-    
-    init() {
-        self.idfa_enabled = isIDFAEnabled()
-        self.IDFA = getIDFA()
-        self.token = Globals.settings.objectForKey("token") as? String
-        self.os_version = UIDevice.currentDevice().systemVersion
-        self.device_kind = UIDevice.currentDevice().modelName
-        self.platform = "ios"
-        self.fb_token = "my_Fb_token"
-        self.bubbles = 0
-        self.state = ""
-    }
+    var fb_token = ""
+    var token = ""
+    var idfa_enabled = ASIdentifierManager.sharedManager().advertisingTrackingEnabled
+    var IDFA = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString ?? ""
+    var os_version = UIDevice.currentDevice().systemVersion
+    var device_kind = UIDevice.currentDevice().modelName
+    var platform = "ios"
+    var bubbles = 0
+    var state = "initialized"
     
     func create() -> Void {
         UserApiController.createUser(self)
     }
-    
-    func getIDFA() -> String? {
-        if isIDFAEnabled() {
-            return ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
-        } else {
-            return nil
-        }
-    }
-    
-    func isIDFAEnabled() -> Bool {
-        return ASIdentifierManager.sharedManager().advertisingTrackingEnabled
-    }
+
     
     func loggedIn() -> Bool {
-        if self.fb_token == nil {
+        if self.fb_token == "" {
             return false
         } else {
             return true

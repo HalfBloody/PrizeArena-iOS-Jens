@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let login_button = FBSDKLoginButton()
+        login_button.center = self.view.center
+        login_button.readPermissions = ["public_profile", "email", "user_friends"]
+        self.view.addSubview(login_button)
+        
     }
 
     override func didReceiveMemoryWarning() {
