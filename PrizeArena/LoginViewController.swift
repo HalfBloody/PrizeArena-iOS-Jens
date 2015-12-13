@@ -17,7 +17,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.navigationController?.navigationBar.hidden = true
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             print("has FB access token")
-            let prizesViewControllerView = self.storyboard?.instantiateViewControllerWithIdentifier("PrizesViewController") as! PrizesViewController
+            let prizesViewControllerView = self.storyboard?.instantiateViewControllerWithIdentifier("prizesViewController") as! PrizesViewController
             print("instanciated")
             self.navigationController!.pushViewController(prizesViewControllerView
                 , animated: true)
@@ -45,8 +45,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("canceled")
         }
         else {
+            Globals.user!.fb_token = FBSDKAccessToken.currentAccessToken().tokenString
             print("performing show prizes segue")
-            let prizesViewControllerView = self.storyboard?.instantiateViewControllerWithIdentifier("PrizesViewController") as! PrizesViewController
+            let prizesViewControllerView = self.storyboard?.instantiateViewControllerWithIdentifier("prizesViewController") as! PrizesViewController
             print("instanciated")
             self.navigationController!.pushViewController(prizesViewControllerView
                 , animated: true)
@@ -63,7 +64,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
 //    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
-//        let prizesViewControllerView = self.storyboard?.instantiateViewControllerWithIdentifier("PrizesViewController") as! PrizesViewController
+//        let prizesViewControllerView = self.storyboard?.instantiateViewControllerWithIdentifier("prizesViewController") as! PrizesViewController
 //        print("instanciated")
 //        self.navigationController!.pushViewController(prizesViewControllerView
 //            , animated: true)

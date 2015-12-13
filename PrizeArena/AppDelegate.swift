@@ -21,13 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-//        let user = User()
-//        try! realm.write {
-//            realm.add(user)
-//        }
-//        UserApiController.createUser(user)
-//        print (user.bubbles)
-//        print(user.token)
+        AccountCreator.execute()
 //        UserApiController.getUser(user)
 //        UserApiController.loginUser(user)
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)

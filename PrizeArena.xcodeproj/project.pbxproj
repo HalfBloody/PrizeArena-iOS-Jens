@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A413AABC1C170D95003135EE /* AccountCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413AABB1C170D95003135EE /* AccountCreator.swift */; };
+		A413AAC01C172208003135EE /* PreparePrizesForDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */; };
+		A413AAC21C1722B9003135EE /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413AAC11C1722B9003135EE /* PrizesViewController.swift */; };
+		A413AAC51C18D959003135EE /* PrizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413AAC41C18D959003135EE /* PrizeCell.swift */; };
+		A413AAC61C18E309003135EE /* PrizesApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413AABD1C17209F003135EE /* PrizesApiController.swift */; };
 		A4405FD11C119FE100C29345 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FD01C119FE100C29345 /* AppDelegate.swift */; };
 		A4405FD31C119FE100C29345 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FD21C119FE100C29345 /* LoginViewController.swift */; };
 		A4405FD61C119FE100C29345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4405FD41C119FE100C29345 /* Main.storyboard */; };
@@ -36,7 +41,6 @@
 		A46F38401C15BBD000313772 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */; };
 		A46F38421C15BBDA00313772 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */; };
 		A46F38441C15BBE000313772 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F38431C15BBE000313772 /* FBSDKShareKit.framework */; };
-		A46F38461C15D53100313772 /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F38451C15D53100313772 /* PrizesViewController.swift */; };
 		A4AE7C941C1483710053CBED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FFA1C11AA3B00C29345 /* RealmSwift.framework */; };
 		A4AE7C951C1483780053CBED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E81231C11CC6100FA984C /* Realm.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A413AABB1C170D95003135EE /* AccountCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCreator.swift; sourceTree = "<group>"; };
+		A413AABD1C17209F003135EE /* PrizesApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizesApiController.swift; sourceTree = "<group>"; };
+		A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparePrizesForDisplay.swift; sourceTree = "<group>"; };
+		A413AAC11C1722B9003135EE /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = ../PrizesViewController.swift; sourceTree = "<group>"; };
+		A413AAC41C18D959003135EE /* PrizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeCell.swift; sourceTree = "<group>"; };
 		A4405FCD1C119FE100C29345 /* PrizeArena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrizeArena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4405FD01C119FE100C29345 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4405FD21C119FE100C29345 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +106,6 @@
 		A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		A46F38431C15BBE000313772 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		A46F38451C15D53100313772 /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A413AABA1C170D56003135EE /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				A413AABB1C170D95003135EE /* AccountCreator.swift */,
+				A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */,
+			);
+			name = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		A413AAC31C18D921003135EE /* PrizeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A413AAC11C1722B9003135EE /* PrizesViewController.swift */,
+				A413AAC41C18D959003135EE /* PrizeCell.swift */,
+			);
+			name = PrizeViewController;
+			sourceTree = "<group>";
+		};
 		A4405FC41C119FE100C29345 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +180,7 @@
 		A4405FCF1C119FE100C29345 /* PrizeArena */ = {
 			isa = PBXGroup;
 			children = (
+				A413AABA1C170D56003135EE /* BusinessLogic */,
 				A46F38471C15D53B00313772 /* ViewControllers */,
 				A44060011C11AC9900C29345 /* ApiControllers */,
 				A4405FE91C11A62A00C29345 /* Models */,
@@ -218,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				A44060021C11ACAC00C29345 /* UserApiController.swift */,
+				A413AABD1C17209F003135EE /* PrizesApiController.swift */,
 			);
 			name = ApiControllers;
 			sourceTree = "<group>";
@@ -225,8 +253,8 @@
 		A46F38471C15D53B00313772 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A413AAC31C18D921003135EE /* PrizeViewController */,
 				A4405FD21C119FE100C29345 /* LoginViewController.swift */,
-				A46F38451C15D53100313772 /* PrizesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -323,12 +351,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A413AAC21C1722B9003135EE /* PrizesViewController.swift in Sources */,
 				A46F383B1C14FD9200313772 /* Prize.swift in Sources */,
 				A4405FE81C11A61E00C29345 /* User.swift in Sources */,
 				A4405FD91C119FE100C29345 /* PrizeArena.xcdatamodeld in Sources */,
 				A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */,
-				A46F38461C15D53100313772 /* PrizesViewController.swift in Sources */,
+				A413AAC01C172208003135EE /* PreparePrizesForDisplay.swift in Sources */,
+				A413AAC61C18E309003135EE /* PrizesApiController.swift in Sources */,
+				A413AAC51C18D959003135EE /* PrizeCell.swift in Sources */,
 				A4405FD31C119FE100C29345 /* LoginViewController.swift in Sources */,
+				A413AABC1C170D95003135EE /* AccountCreator.swift in Sources */,
 				A4405FEB1C11A7AF00C29345 /* Globals.swift in Sources */,
 				A4405FD11C119FE100C29345 /* AppDelegate.swift in Sources */,
 				A4405FEF1C11A8A200C29345 /* DeviceKind.swift in Sources */,

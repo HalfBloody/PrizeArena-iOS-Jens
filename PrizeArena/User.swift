@@ -12,35 +12,50 @@ import AdSupport
 import Alamofire
 import SwiftyJSON
 import RealmSwift
+import FBSDKLoginKit
 
 
-class User : Object {
-    static let sharedInstance = User()
-    
-    var fb_token = ""
-    var token = ""
+class User {
+    var token = Globals.settings.stringForKey("user_token") ?? ""
+    var bubbles = Globals.settings.integerForKey("user_bubbles") ?? 0
+    var fb_token = Globals.settings.stringForKey("fb_token") ?? ""
     var idfa_enabled = ASIdentifierManager.sharedManager().advertisingTrackingEnabled
     var IDFA = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString ?? ""
     var os_version = UIDevice.currentDevice().systemVersion
     var device_kind = UIDevice.currentDevice().modelName
     var platform = "ios"
-    var bubbles = 0
-    var state = "initialized"
+    var state = Globals.settings.stringForKey("user_state") ?? ""
     
-    func create() -> Void {
-        UserApiController.createUser(self)
+    func initialize() -> Void {
+        return
     }
-
     
-    func loggedIn() -> Bool {
-        if self.fb_token == "" {
-            return false
+    func updateKeys()-> Void {
+        if let current_token = FBSDKAccessToken.currentAccessToken() {
+            fb_token = current_token.tokenString
         } else {
-            return true
+            fb_token = ""
         }
+        
+        idfa_enabled = ASIdentifierManager.sharedManager().advertisingTrackingEnabled
+        IDFA = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString ?? ""
+        os_version = UIDevice.currentDevice().systemVersion
+        device_kind = UIDevice.currentDevice().modelName
+        Globals.settings.setValue(fb_token, forKey: "fb_token")
+        Globals.settings.setValue(idfa_enabled, forKey: "idfa_enabled")
+        Globals.settings.setValue(IDFA, forKey: "IDFA")
+        Globals.settings.setValue(token, forKey: "user_token")
+        Globals.settings.setValue(bubbles, forKey: "user_bubbles")
+        Globals.settings.setValue(os_version, forKey: "os_version")
+        Globals.settings.setValue(device_kind, forKey: "device_kind")
+        Globals.settings.setValue(platform, forKey: "platform")
+        Globals.settings.setValue(state, forKey: "user_state")
     }
+    
     func updateStateToLoggedIn() -> Void {
-        self.state = "logged_in"
+        try! realm.write {
+            self.state = "logged_in"
+        }
         print("user state updated to logged_in")
     }
 }
