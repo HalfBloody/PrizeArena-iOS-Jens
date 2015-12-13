@@ -21,7 +21,7 @@
 		A4405FE61C11A02A00C29345 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = A4405FE51C11A02A00C29345 /* Cartfile */; };
 		A4405FE81C11A61E00C29345 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FE71C11A61E00C29345 /* User.swift */; };
 		A4405FEB1C11A7AF00C29345 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FEA1C11A7AF00C29345 /* Globals.swift */; };
-		A4405FEF1C11A8A200C29345 /* DeviceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FEE1C11A8A200C29345 /* DeviceKind.swift */; };
+		A4405FEF1C11A8A200C29345 /* Utils in Sources */ = {isa = PBXBuildFile; fileRef = A4405FEE1C11A8A200C29345 /* Utils */; };
 		A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44060021C11ACAC00C29345 /* UserApiController.swift */; };
 		A46E811E1C11CC4F00FA984C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */; };
 		A46E811F1C11CC5200FA984C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF21C11AA2300C29345 /* Kingfisher.framework */; };
@@ -68,8 +68,8 @@
 		A413AABB1C170D95003135EE /* AccountCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCreator.swift; sourceTree = "<group>"; };
 		A413AABD1C17209F003135EE /* PrizesApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizesApiController.swift; sourceTree = "<group>"; };
 		A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparePrizesForDisplay.swift; sourceTree = "<group>"; };
-		A413AAC11C1722B9003135EE /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = ../PrizesViewController.swift; sourceTree = "<group>"; };
-		A413AAC41C18D959003135EE /* PrizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeCell.swift; sourceTree = "<group>"; };
+		A413AAC11C1722B9003135EE /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = PrizeArena/ViewControllers/PrizeViewController/PrizesViewController.swift; sourceTree = "<group>"; };
+		A413AAC41C18D959003135EE /* PrizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizeCell.swift; path = PrizeArena/ViewControllers/PrizeViewController/PrizeCell.swift; sourceTree = "<group>"; };
 		A4405FCD1C119FE100C29345 /* PrizeArena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrizeArena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4405FD01C119FE100C29345 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4405FD21C119FE100C29345 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		A4405FE51C11A02A00C29345 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A4405FE71C11A61E00C29345 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A4405FEA1C11A7AF00C29345 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		A4405FEE1C11A8A200C29345 /* DeviceKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceKind.swift; sourceTree = "<group>"; };
+		A4405FEE1C11A8A200C29345 /* Utils */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = Utils; path = Lib/Utils; sourceTree = "<group>"; };
 		A4405FF01C11AA1B00C29345 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A4405FF21C11AA2300C29345 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		A4405FF41C11AA2700C29345 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		A46E81351C11CD7300FA984C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		A46E81381C11CD8400FA984C /* SugarRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SugarRecord.framework; path = Carthage/Build/iOS/SugarRecord.framework; sourceTree = "<group>"; };
 		A46E813B1C11CD8900FA984C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		A46F383A1C14FD9200313772 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prize.swift; path = ../Prize.swift; sourceTree = "<group>"; };
+		A46F383A1C14FD9200313772 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		A46F383C1C15BAFA00313772 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		A46F383D1C15BBCA00313772 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 				A413AABB1C170D95003135EE /* AccountCreator.swift */,
 				A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */,
 			);
-			name = BusinessLogic;
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 		A413AAC31C18D921003135EE /* PrizeViewController */ = {
@@ -148,6 +148,7 @@
 				A413AAC41C18D959003135EE /* PrizeCell.swift */,
 			);
 			name = PrizeViewController;
+			path = ViewControllers/PrizeViewController;
 			sourceTree = "<group>";
 		};
 		A4405FC41C119FE100C29345 = {
@@ -201,7 +202,7 @@
 				A46F383A1C14FD9200313772 /* Prize.swift */,
 				A4405FE71C11A61E00C29345 /* User.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A4405FEC1C11A87C00C29345 /* Lib */ = {
@@ -215,7 +216,7 @@
 		A4405FED1C11A88A00C29345 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A4405FEE1C11A8A200C29345 /* DeviceKind.swift */,
+				A4405FEE1C11A8A200C29345 /* Utils */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -247,7 +248,7 @@
 				A44060021C11ACAC00C29345 /* UserApiController.swift */,
 				A413AABD1C17209F003135EE /* PrizesApiController.swift */,
 			);
-			name = ApiControllers;
+			path = ApiControllers;
 			sourceTree = "<group>";
 		};
 		A46F38471C15D53B00313772 /* ViewControllers */ = {
@@ -256,7 +257,7 @@
 				A413AAC31C18D921003135EE /* PrizeViewController */,
 				A4405FD21C119FE100C29345 /* LoginViewController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +364,7 @@
 				A413AABC1C170D95003135EE /* AccountCreator.swift in Sources */,
 				A4405FEB1C11A7AF00C29345 /* Globals.swift in Sources */,
 				A4405FD11C119FE100C29345 /* AppDelegate.swift in Sources */,
-				A4405FEF1C11A8A200C29345 /* DeviceKind.swift in Sources */,
+				A4405FEF1C11A8A200C29345 /* Utils in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
