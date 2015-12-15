@@ -39,9 +39,12 @@
 		A46F38401C15BBD000313772 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */; };
 		A46F38421C15BBDA00313772 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */; };
 		A46F38441C15BBE000313772 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46F38431C15BBE000313772 /* FBSDKShareKit.framework */; };
+		A4833A411C204F01004FD166 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4833A401C204F01004FD166 /* QuizQuestion.swift */; };
+		A4833A431C204F0A004FD166 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4833A421C204F0A004FD166 /* Offer.swift */; };
 		A4AE7C941C1483710053CBED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FFA1C11AA3B00C29345 /* RealmSwift.framework */; };
 		A4AE7C951C1483780053CBED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E81231C11CC6100FA984C /* Realm.framework */; };
 		A4F9D2831C1EE0AB005903B6 /* DeviceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9D2821C1EE0AB005903B6 /* DeviceKind.swift */; };
+		A4F9D2851C1F3391005903B6 /* PrizeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F9D2841C1F3391005903B6 /* PrizeCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,7 +107,10 @@
 		A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A46F38411C15BBDA00313772 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		A46F38431C15BBE000313772 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		A4833A401C204F01004FD166 /* QuizQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		A4833A421C204F0A004FD166 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		A4F9D2821C1EE0AB005903B6 /* DeviceKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceKind.swift; path = Lib/Utils/DeviceKind.swift; sourceTree = "<group>"; };
+		A4F9D2841C1F3391005903B6 /* PrizeCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 			children = (
 				A413AABB1C170D95003135EE /* AccountCreator.swift */,
 				A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */,
+				A4F9D2841C1F3391005903B6 /* PrizeCollection.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -199,6 +206,8 @@
 			children = (
 				A46F383A1C14FD9200313772 /* Prize.swift */,
 				A4405FE71C11A61E00C29345 /* User.swift */,
+				A4833A401C204F01004FD166 /* QuizQuestion.swift */,
+				A4833A421C204F0A004FD166 /* Offer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +367,9 @@
 				A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */,
 				A413AAC01C172208003135EE /* PreparePrizesForDisplay.swift in Sources */,
 				A413AAC61C18E309003135EE /* PrizesApiController.swift in Sources */,
+				A4833A431C204F0A004FD166 /* Offer.swift in Sources */,
+				A4F9D2851C1F3391005903B6 /* PrizeCollection.swift in Sources */,
+				A4833A411C204F01004FD166 /* QuizQuestion.swift in Sources */,
 				A413AAC51C18D959003135EE /* PrizeCell.swift in Sources */,
 				A4405FD31C119FE100C29345 /* LoginViewController.swift in Sources */,
 				A413AABC1C170D95003135EE /* AccountCreator.swift in Sources */,
