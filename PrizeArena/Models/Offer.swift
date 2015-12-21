@@ -9,6 +9,6 @@
 import Foundation
 import RealmSwift
 
-class Offer : Object {
+class OfferModel {
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct Globals {
-    static var user : User?
+    static var user : UserModel?
     static var settings = NSUserDefaults.standardUserDefaults()
     static var base_url =  "http://localhost:3000/api/dummy/"
     // "https://aqueous-mountain-1583.herokuapp.com/api/dummy/"

@@ -7,3 +7,4 @@ github "SwiftyJSON/SwiftyJSON"
 github "onevcat/Kingfisher" >= 1.8
 github "tristanhimmelman/AlamofireObjectMapper" ~> 2.1
 github "realm/realm-cocoa"
+github "ReactiveCocoa/ReactiveCocoa"

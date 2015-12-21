@@ -9,7 +9,7 @@
 import Foundation
 
 class PrizesForDisplay {
-    class func prepare(prizes: [Prize]?, completionHandler : ([Prize]?, NSError?) -> Void) {
+    class func prepare(prizes: [PrizeModel]?, completionHandler : ([PrizeModel]?, NSError?) -> Void) {
         
     }
 }

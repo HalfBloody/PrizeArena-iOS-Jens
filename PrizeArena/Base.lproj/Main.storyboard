@@ -92,6 +92,9 @@
                             <outlet property="delegate" destination="azT-VT-jjt" id="WVz-eG-0eO"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ra7-fv-7em">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Njw-jf-8P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +120,7 @@
         <!--Navigation Controller-->
         <scene sceneID="TkA-Ab-WaO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cZ-JM-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="raN-E7-K1S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nyh-tQ-SbS">
@@ -128,7 +132,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ue5-sd-q3F"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4cZ-JM-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1277" y="139"/>
         </scene>

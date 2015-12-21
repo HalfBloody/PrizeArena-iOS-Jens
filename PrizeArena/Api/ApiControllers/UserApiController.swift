@@ -15,7 +15,7 @@ import RealmSwift
 
 class UserApiController {
 
-    static func loginUser(user: User) -> Void {
+    static func loginUser(user: UserModel) -> Void {
         let params: [String: AnyObject] = [
         "token": user.token,
         "user": [
@@ -27,26 +27,21 @@ class UserApiController {
             .responseJSON { response in
                 switch response.result {
                 case .Success(_):
-                    print("success login")
                     user.updateStateToLoggedIn()
                 case .Failure(let error):
-                    print(url)
-                    print(params)
                     print("UserApiController::loginUser failed with error: \(error)")
                 }
         }
     }
 
-    static func getUser(user: User) -> Void {
+    static func getUser(user: UserModel) -> Void {
         let realm = try! Realm()
         let params = "token=" + user.token
         let url = Globals.base_url + "users/me.json?" + params
-        print(url)
         Alamofire.request(.GET, url)
             .responseJSON { response in
                 switch response.result {
                 case .Success(let data):
-                    print("success getting user")
                     let json = JSON(data)
                     if let bubbles = json["user"]["bubbles"].int {
                         try! realm.write {
@@ -59,7 +54,7 @@ class UserApiController {
         }
     }
     
-    static func createUser(user: User) -> Void {
+    static func createUser(user: UserModel) -> Void {
         let params = prepareCreateParams(user)
         let url = Globals.base_url + "users"
         Alamofire.request(.POST, url, parameters: params as [String: AnyObject], encoding: .JSON)
@@ -68,7 +63,6 @@ class UserApiController {
                 case .Success(let data):
                     let json = JSON(data)
                     if let token = json["user"]["token"].string {
-                        print("there is json")
                         Globals.settings.setObject(token, forKey: "user_token")
                         Globals.user!.token = token
                     }
@@ -77,31 +71,26 @@ class UserApiController {
                         Globals.user!.bubbles = bubbles
                     }
                 case .Failure(let error):
-                    print(url)
-                    print(params)
                     print("UserApiController::updateUser failed with error: \(error)")
                 }
         }
     }
     
-    static func updateUser(user: User) -> Void {
+    static func updateUser(user: UserModel) -> Void {
         let params = prepareUpdateParams(user)
         let url = Globals.base_url + "user/me"
         Alamofire.request(.PUT, url, parameters: params as [String: AnyObject], encoding: .JSON)
             .responseJSON { response in
                 switch response.result {
                 case .Success(_):
-//                    print("success")
-//                    print(data)
                     return
                 case .Failure(let error):
-                    print(response)
                     print("UserApiController::updateUser failed with error: \(error)")
                 }
         }
     }
     
-    static func prepareUpdateParams(user: User) -> [String: AnyObject] {
+    static func prepareUpdateParams(user: UserModel) -> [String: AnyObject] {
         let params: [String: AnyObject] = [
             "token": user.token,
             "device": [
@@ -116,7 +105,7 @@ class UserApiController {
         return params
     }
     
-    static func prepareCreateParams(user: User) -> [String: AnyObject] {
+    static func prepareCreateParams(user: UserModel) -> [String: AnyObject] {
         let params: [String: AnyObject] = [
             "device": [
                 "idfa": user.IDFA,

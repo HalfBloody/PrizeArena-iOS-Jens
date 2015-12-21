@@ -12,12 +12,12 @@ import RealmSwift
 
 class PrizeCollection {
     
-    class func fetchFromRealm() -> [Prize]? {
-        let realm = try! Realm()
-        let not_ended = NSPredicate(format: "end_date = NIL OR end_date < %@", NSDate())
+    class func fetchFromRealm() -> [PrizeModel]? {
+
+        let not_ended = NSPredicate(format: "end_date = NIL OR end_date > %@", NSDate())
         let started = NSPredicate(format: "start_date < %@", NSDate())
         let predicate = NSCompoundPredicate(type: .AndPredicateType, subpredicates: [not_ended, started])
-        let prizes = realm.objects(Prize).filter(predicate)
+        let prizes = try! Realm().objects(PrizeModel).filter(predicate)
         return Array(prizes)
     }
 }

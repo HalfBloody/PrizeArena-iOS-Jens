@@ -9,7 +9,8 @@
 import Foundation
 import RealmSwift
 
-class QuizQuestion : Object {
+class QuizQuestionModel : Object {
+    dynamic var id = 0
     dynamic var text = ""
     
     

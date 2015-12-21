@@ -15,7 +15,7 @@ import RealmSwift
 import FBSDKLoginKit
 
 
-class User {
+class UserModel {
     var token = Globals.settings.stringForKey("user_token") ?? ""
     var bubbles = Globals.settings.integerForKey("user_bubbles") ?? 0
     var fb_token = Globals.settings.stringForKey("fb_token") ?? ""
@@ -53,7 +53,7 @@ class User {
     }
     
     func updateStateToLoggedIn() -> Void {
-        try! realm.write {
+        try!Realm().write {
             self.state = "logged_in"
         }
         print("user state updated to logged_in")

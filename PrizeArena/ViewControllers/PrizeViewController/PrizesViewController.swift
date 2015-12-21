@@ -9,9 +9,9 @@
 import UIKit
 
 class PrizesViewController: UITableViewController {
-    var prizes : [Prize] = []
+    var prizes : [PrizeModel] = []
     
-    func updatePrizesTable(new_prizes : [Prize]) -> Void {
+    func updatePrizesTable(new_prizes : [PrizeModel]) -> Void {
         prizes = new_prizes
         self.tableView.reloadData()
     }
@@ -21,9 +21,11 @@ class PrizesViewController: UITableViewController {
 
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationItem.title = "Prizes"
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: .ValueChanged)
         PrizesApiController.getPrizes() {
             result in
-                self.refreshPrizes()
+            print("completion handler")
+                self.refreshPrizes(result)
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -61,60 +63,36 @@ class PrizesViewController: UITableViewController {
         return cell
     }
     
-    func refreshPrizes() -> Void {
-        let fetchedPrizes = PrizeCollection.fetchFromRealm()
-        print("fetched")
-        print(fetchedPrizes)
-        print("fetched")
-        if fetchedPrizes != nil {
-            self.prizes = fetchedPrizes!
+    func refreshPrizes(result : String) -> Void {
+        print("handling completion")
+        if result == "success" {
+            print("process success")
+            let fetchedPrizes = PrizeCollection.fetchFromRealm()
+            print("fetched")
+            print(fetchedPrizes)
+            print("fetched")
+            if fetchedPrizes != nil {
+                self.prizes = fetchedPrizes!
+            }
+            self.tableView.reloadData()
+        } else if result == "error" {
+            print("process error")
+            let alertController = UIAlertController(title: "Connection failed", message: "We're not able to connect to the server at the moment", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "Mkay", style: .Default) {
+                (action) in
+                alertController .dismissViewControllerAnimated(true, completion: nil)
+            }
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
-        self.tableView.reloadData()
+        self.refreshControl!.endRefreshing()
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        print("refreshing")
+        PrizesApiController.getPrizes() {
+            result in
+            self.refreshPrizes(result)
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

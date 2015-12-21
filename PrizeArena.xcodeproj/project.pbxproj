@@ -22,6 +22,8 @@
 		A4405FE81C11A61E00C29345 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FE71C11A61E00C29345 /* User.swift */; };
 		A4405FEB1C11A7AF00C29345 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4405FEA1C11A7AF00C29345 /* Globals.swift */; };
 		A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44060021C11ACAC00C29345 /* UserApiController.swift */; };
+		A44CC35E1C232AE200D20EE9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CC35D1C232AE200D20EE9 /* UserResponse.swift */; };
+		A44CC3601C232B0600D20EE9 /* PrizesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CC35F1C232B0600D20EE9 /* PrizesResponse.swift */; };
 		A46E811E1C11CC4F00FA984C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */; };
 		A46E811F1C11CC5200FA984C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF21C11AA2300C29345 /* Kingfisher.framework */; };
 		A46E81201C11CC5700FA984C /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF41C11AA2700C29345 /* MagicalRecord.framework */; };
@@ -68,7 +70,7 @@
 
 /* Begin PBXFileReference section */
 		A413AABB1C170D95003135EE /* AccountCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCreator.swift; sourceTree = "<group>"; };
-		A413AABD1C17209F003135EE /* PrizesApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizesApiController.swift; sourceTree = "<group>"; };
+		A413AABD1C17209F003135EE /* PrizesApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesApiController.swift; path = PrizeArena/Api/ApiControllers/PrizesApiController.swift; sourceTree = SOURCE_ROOT; };
 		A413AABF1C172208003135EE /* PreparePrizesForDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparePrizesForDisplay.swift; sourceTree = "<group>"; };
 		A413AAC11C1722B9003135EE /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = PrizeArena/ViewControllers/PrizeViewController/PrizesViewController.swift; sourceTree = SOURCE_ROOT; };
 		A413AAC41C18D959003135EE /* PrizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizeCell.swift; path = PrizeArena/ViewControllers/PrizeViewController/PrizeCell.swift; sourceTree = SOURCE_ROOT; };
@@ -91,7 +93,9 @@
 		A4405FFA1C11AA3B00C29345 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		A4405FFC1C11AA3F00C29345 /* SugarRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SugarRecord.framework; path = Carthage/Build/iOS/SugarRecord.framework; sourceTree = "<group>"; };
 		A4405FFE1C11AA4100C29345 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		A44060021C11ACAC00C29345 /* UserApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserApiController.swift; sourceTree = "<group>"; };
+		A44060021C11ACAC00C29345 /* UserApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserApiController.swift; path = PrizeArena/Api/ApiControllers/UserApiController.swift; sourceTree = SOURCE_ROOT; };
+		A44CC35D1C232AE200D20EE9 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserResponse.swift; path = PrizeArena/Api/ResponseObjects/UserResponse.swift; sourceTree = SOURCE_ROOT; };
+		A44CC35F1C232B0600D20EE9 /* PrizesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesResponse.swift; path = PrizeArena/Api/ResponseObjects/PrizesResponse.swift; sourceTree = SOURCE_ROOT; };
 		A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		A46E81231C11CC6100FA984C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		A46E81281C11CD2F00FA984C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -188,7 +192,7 @@
 			children = (
 				A413AABA1C170D56003135EE /* BusinessLogic */,
 				A46F38471C15D53B00313772 /* ViewControllers */,
-				A44060011C11AC9900C29345 /* ApiControllers */,
+				A44060011C11AC9900C29345 /* Api */,
 				A4405FE91C11A62A00C29345 /* Models */,
 				A4405FD01C119FE100C29345 /* AppDelegate.swift */,
 				A4405FD41C119FE100C29345 /* Main.storyboard */,
@@ -249,13 +253,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A44060011C11AC9900C29345 /* ApiControllers */ = {
+		A44060011C11AC9900C29345 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				A44060021C11ACAC00C29345 /* UserApiController.swift */,
-				A413AABD1C17209F003135EE /* PrizesApiController.swift */,
+				A44CC3611C23406600D20EE9 /* Utils */,
+				A44CC35C1C232A7400D20EE9 /* ApiControllers */,
+				A44CC35B1C232A6700D20EE9 /* ResponseObjects */,
 			);
+			name = Api;
 			path = ApiControllers;
+			sourceTree = "<group>";
+		};
+		A44CC35B1C232A6700D20EE9 /* ResponseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				A44CC35D1C232AE200D20EE9 /* UserResponse.swift */,
+				A44CC35F1C232B0600D20EE9 /* PrizesResponse.swift */,
+			);
+			name = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		A44CC35C1C232A7400D20EE9 /* ApiControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A413AABD1C17209F003135EE /* PrizesApiController.swift */,
+				A44060021C11ACAC00C29345 /* UserApiController.swift */,
+			);
+			name = ApiControllers;
+			sourceTree = "<group>";
+		};
+		A44CC3611C23406600D20EE9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A46F38471C15D53B00313772 /* ViewControllers */ = {
@@ -366,7 +397,9 @@
 				A4405FD91C119FE100C29345 /* PrizeArena.xcdatamodeld in Sources */,
 				A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */,
 				A413AAC01C172208003135EE /* PreparePrizesForDisplay.swift in Sources */,
+				A44CC35E1C232AE200D20EE9 /* UserResponse.swift in Sources */,
 				A413AAC61C18E309003135EE /* PrizesApiController.swift in Sources */,
+				A44CC3601C232B0600D20EE9 /* PrizesResponse.swift in Sources */,
 				A4833A431C204F0A004FD166 /* Offer.swift in Sources */,
 				A4F9D2851C1F3391005903B6 /* PrizeCollection.swift in Sources */,
 				A4833A411C204F01004FD166 /* QuizQuestion.swift in Sources */,

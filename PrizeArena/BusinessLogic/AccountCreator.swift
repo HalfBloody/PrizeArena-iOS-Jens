@@ -12,7 +12,7 @@ import RealmSwift
 class AccountCreator {
     
     static func execute() ->Void {
-        let user = User()
+        let user = UserModel()
         user.updateKeys()
         Globals.user = user
         if user.token != "" {
