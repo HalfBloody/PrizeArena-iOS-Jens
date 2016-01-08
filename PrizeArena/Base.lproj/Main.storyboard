@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -38,47 +39,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prizeCell" rowHeight="85" id="cwu-CH-A7m" customClass="PrizeCell" customModule="PrizeArena" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prizeCell" id="cwu-CH-A7m" customClass="PrizeCell" customModule="PrizeArena" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cwu-CH-A7m" id="Sb4-GT-yJ5">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-6Q-CaT">
-                                            <rect key="frame" x="44" y="31" width="116" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-6Q-CaT">
+                                            <rect key="frame" x="211" y="8" width="116" height="21"/>
                                             <accessibility key="accessibilityConfiguration" identifier="titleLabel"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-cU-1n5">
-                                            <rect key="frame" x="168" y="31" width="122" height="21"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="freeSlotsLabel"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-6T-N6i">
-                                            <rect key="frame" x="367" y="31" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-6T-N6i">
+                                            <rect key="frame" x="317" y="37" width="42" height="21"/>
                                             <accessibility key="accessibilityConfiguration" identifier="totalSlotsLabel"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Free Slots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FM-Ou-Lzo">
-                                            <rect key="frame" x="168" y="8" width="77" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-cU-1n5">
+                                            <rect key="frame" x="208" y="37" width="122" height="21"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="freeSlotsLabel"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Slots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwY-hL-lKq">
-                                            <rect key="frame" x="364" y="8" width="80" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-kK-f3T">
+                                            <rect key="frame" x="0.0" y="-8" width="94" height="100"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="macbook_air.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DC6-bz-Vxv">
+                                                    <rect key="frame" x="3" y="13" width="94" height="73"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="DC6-bz-Vxv" firstAttribute="centerY" secondItem="DzT-kK-f3T" secondAttribute="centerY" id="UCG-HK-7QF"/>
+                                                <constraint firstItem="DC6-bz-Vxv" firstAttribute="centerX" secondItem="DzT-kK-f3T" secondAttribute="centerX" id="y4l-sT-6dg"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qbn-6Q-CaT" firstAttribute="top" secondItem="Sb4-GT-yJ5" secondAttribute="topMargin" id="1AT-eo-VDR"/>
+                                        <constraint firstItem="kmQ-cU-1n5" firstAttribute="leading" secondItem="Sb4-GT-yJ5" secondAttribute="leadingMargin" constant="110" id="23V-iD-q2P"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kmQ-cU-1n5" secondAttribute="bottom" constant="16" id="9Aq-mj-XZM"/>
+                                        <constraint firstItem="qbn-6Q-CaT" firstAttribute="leading" secondItem="Sb4-GT-yJ5" secondAttribute="leadingMargin" constant="110" id="K6d-1I-lcg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3Qt-6T-N6i" secondAttribute="bottom" constant="16" id="RJp-Ld-6Qh"/>
+                                        <constraint firstItem="3Qt-6T-N6i" firstAttribute="leading" secondItem="Sb4-GT-yJ5" secondAttribute="leadingMargin" constant="240" id="aDS-s8-4dM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="freeSlotsLabel" destination="kmQ-cU-1n5" id="rQi-JL-3cK"/>
@@ -120,7 +130,6 @@
         <!--Navigation Controller-->
         <scene sceneID="TkA-Ab-WaO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4cZ-JM-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="raN-E7-K1S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nyh-tQ-SbS">
@@ -132,8 +141,12 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ue5-sd-q3F"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cZ-JM-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1277" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="macbook_air.jpg" width="94" height="53"/>
+    </resources>
 </document>

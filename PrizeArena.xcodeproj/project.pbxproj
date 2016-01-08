@@ -24,6 +24,13 @@
 		A44060031C11ACAC00C29345 /* UserApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44060021C11ACAC00C29345 /* UserApiController.swift */; };
 		A44CC35E1C232AE200D20EE9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CC35D1C232AE200D20EE9 /* UserResponse.swift */; };
 		A44CC3601C232B0600D20EE9 /* PrizesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44CC35F1C232B0600D20EE9 /* PrizesResponse.swift */; };
+		A46DB66C1C3EC09300F386CA /* FontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46DB66B1C3EC09300F386CA /* FontSizes.swift */; };
+		A46DB66E1C3EC0B600F386CA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46DB66D1C3EC0B600F386CA /* Colors.swift */; };
+		A46DB6741C3EC15800F386CA /* aleo-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6701C3EC15800F386CA /* aleo-bold-webfont.ttf */; };
+		A46DB6751C3EC15800F386CA /* aleo-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6711C3EC15800F386CA /* aleo-italic-webfont.ttf */; };
+		A46DB6761C3EC15800F386CA /* aleo-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6721C3EC15800F386CA /* aleo-light-webfont.ttf */; };
+		A46DB6771C3EC15800F386CA /* aleo-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6731C3EC15800F386CA /* aleo-regular-webfont.ttf */; };
+		A46DB67A1C3ED77C00F386CA /* macbook_air.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6791C3ED77C00F386CA /* macbook_air.jpg */; };
 		A46E811E1C11CC4F00FA984C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */; };
 		A46E811F1C11CC5200FA984C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF21C11AA2300C29345 /* Kingfisher.framework */; };
 		A46E81201C11CC5700FA984C /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF41C11AA2700C29345 /* MagicalRecord.framework */; };
@@ -96,6 +103,13 @@
 		A44060021C11ACAC00C29345 /* UserApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserApiController.swift; path = PrizeArena/Api/ApiControllers/UserApiController.swift; sourceTree = SOURCE_ROOT; };
 		A44CC35D1C232AE200D20EE9 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserResponse.swift; path = PrizeArena/Api/ResponseObjects/UserResponse.swift; sourceTree = SOURCE_ROOT; };
 		A44CC35F1C232B0600D20EE9 /* PrizesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesResponse.swift; path = PrizeArena/Api/ResponseObjects/PrizesResponse.swift; sourceTree = SOURCE_ROOT; };
+		A46DB66B1C3EC09300F386CA /* FontSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontSizes.swift; path = Lib/Utils/FontSizes.swift; sourceTree = "<group>"; };
+		A46DB66D1C3EC0B600F386CA /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Lib/Utils/Colors.swift; sourceTree = "<group>"; };
+		A46DB6701C3EC15800F386CA /* aleo-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aleo-bold-webfont.ttf"; sourceTree = "<group>"; };
+		A46DB6711C3EC15800F386CA /* aleo-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aleo-italic-webfont.ttf"; sourceTree = "<group>"; };
+		A46DB6721C3EC15800F386CA /* aleo-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aleo-light-webfont.ttf"; sourceTree = "<group>"; };
+		A46DB6731C3EC15800F386CA /* aleo-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aleo-regular-webfont.ttf"; sourceTree = "<group>"; };
+		A46DB6791C3ED77C00F386CA /* macbook_air.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = macbook_air.jpg; path = Lib/Images/macbook_air.jpg; sourceTree = "<group>"; };
 		A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		A46E81231C11CC6100FA984C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		A46E81281C11CD2F00FA984C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -219,6 +233,7 @@
 		A4405FEC1C11A87C00C29345 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A46DB6781C3ED75C00F386CA /* Images */,
 				A4405FED1C11A88A00C29345 /* Utils */,
 			);
 			name = Lib;
@@ -227,7 +242,10 @@
 		A4405FED1C11A88A00C29345 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A46DB66F1C3EC15800F386CA /* Fonts */,
 				A4F9D2821C1EE0AB005903B6 /* DeviceKind.swift */,
+				A46DB66B1C3EC09300F386CA /* FontSizes.swift */,
+				A46DB66D1C3EC0B600F386CA /* Colors.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -287,6 +305,26 @@
 			children = (
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		A46DB66F1C3EC15800F386CA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A46DB6701C3EC15800F386CA /* aleo-bold-webfont.ttf */,
+				A46DB6711C3EC15800F386CA /* aleo-italic-webfont.ttf */,
+				A46DB6721C3EC15800F386CA /* aleo-light-webfont.ttf */,
+				A46DB6731C3EC15800F386CA /* aleo-regular-webfont.ttf */,
+			);
+			name = Fonts;
+			path = Lib/Utils/Fonts;
+			sourceTree = "<group>";
+		};
+		A46DB6781C3ED75C00F386CA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A46DB6791C3ED77C00F386CA /* macbook_air.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		A46F38471C15D53B00313772 /* ViewControllers */ = {
@@ -361,7 +399,12 @@
 				A4405FDE1C119FE100C29345 /* LaunchScreen.storyboard in Resources */,
 				A4405FDB1C119FE100C29345 /* Assets.xcassets in Resources */,
 				A4405FE61C11A02A00C29345 /* Cartfile in Resources */,
+				A46DB6751C3EC15800F386CA /* aleo-italic-webfont.ttf in Resources */,
 				A4405FD61C119FE100C29345 /* Main.storyboard in Resources */,
+				A46DB67A1C3ED77C00F386CA /* macbook_air.jpg in Resources */,
+				A46DB6741C3EC15800F386CA /* aleo-bold-webfont.ttf in Resources */,
+				A46DB6771C3EC15800F386CA /* aleo-regular-webfont.ttf in Resources */,
+				A46DB6761C3EC15800F386CA /* aleo-light-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A413AAC21C1722B9003135EE /* PrizesViewController.swift in Sources */,
+				A46DB66E1C3EC0B600F386CA /* Colors.swift in Sources */,
 				A46F383B1C14FD9200313772 /* Prize.swift in Sources */,
 				A4405FE81C11A61E00C29345 /* User.swift in Sources */,
 				A4F9D2831C1EE0AB005903B6 /* DeviceKind.swift in Sources */,
@@ -406,6 +450,7 @@
 				A413AAC51C18D959003135EE /* PrizeCell.swift in Sources */,
 				A4405FD31C119FE100C29345 /* LoginViewController.swift in Sources */,
 				A413AABC1C170D95003135EE /* AccountCreator.swift in Sources */,
+				A46DB66C1C3EC09300F386CA /* FontSizes.swift in Sources */,
 				A4405FEB1C11A7AF00C29345 /* Globals.swift in Sources */,
 				A4405FD11C119FE100C29345 /* AppDelegate.swift in Sources */,
 			);

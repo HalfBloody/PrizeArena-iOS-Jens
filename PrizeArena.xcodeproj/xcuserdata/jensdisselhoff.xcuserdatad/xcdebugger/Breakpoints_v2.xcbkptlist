@@ -346,7 +346,7 @@
                   moduleName = "PrizeArena"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jensdisselhoff/dev/PrizeArena/PrizeArena/Api/ResponseObjects/UserResponse.swift"
-                  timestampString = "472413854.346802"
+                  timestampString = "473911693.663398"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -361,7 +361,7 @@
                   moduleName = "PrizeArena"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jensdisselhoff/dev/PrizeArena/PrizeArena/Api/ResponseObjects/UserResponse.swift"
-                  timestampString = "472413854.347183"
+                  timestampString = "473911693.663882"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -376,7 +376,7 @@
                   moduleName = "PrizeArena"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jensdisselhoff/dev/PrizeArena/PrizeArena/Api/ResponseObjects/UserResponse.swift"
-                  timestampString = "472413854.347427"
+                  timestampString = "473911693.664198"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -415,22 +415,6 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "fetchFromRealm()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrizeArena/ViewControllers/PrizeViewController/PrizesViewController.swift"
-            timestampString = "472083866.314894"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

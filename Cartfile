@@ -1,10 +1,9 @@
 
 
 github "Alamofire/Alamofire" ~> 3.0
-github "MagicalPanda/MagicalRecord"
-github "gitdoapp/sugarrecord"
 github "SwiftyJSON/SwiftyJSON"
 github "onevcat/Kingfisher" >= 1.8
 github "tristanhimmelman/AlamofireObjectMapper" ~> 2.1
 github "realm/realm-cocoa"
-github "ReactiveCocoa/ReactiveCocoa"
+github "SnapKit/SnapKit" >= 0.15.0
+
