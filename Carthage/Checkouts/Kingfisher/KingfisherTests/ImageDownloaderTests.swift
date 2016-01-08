@@ -165,6 +165,8 @@ class ImageDownloaderTests: XCTestCase {
     func testSSLCertificateValidation() {
         LSNocilla.sharedInstance().stop()
         
+        let downloader = ImageDownloader(name: "ssl.test")
+        
         let URL = NSURL(string: "https://testssl-expire.disig.sk/Expired.png")!
         
         let expectation = expectationWithDescription("wait for download from an invalid ssl site.")
@@ -203,5 +205,65 @@ class ImageDownloaderTests: XCTestCase {
         }
         
         waitForExpectationsWithTimeout(5, handler: nil)
+    }
+    
+    func testDownloadEmptyURL() {
+        let expectation = expectationWithDescription("wait for downloading error")
+        
+        downloader.downloadImageWithURL(NSURL(string: "")!, progressBlock: { (receivedSize, totalSize) -> () in
+            XCTFail("The progress block should not be called.")
+            }) { (image, error, imageURL, originalData) -> () in
+                XCTAssertNotNil(error, "An error should happen for empty URL")
+                XCTAssertEqual(error!.code, KingfisherError.InvalidURL.rawValue)
+                expectation.fulfill()
+        }
+        waitForExpectationsWithTimeout(5, handler: nil)
+    }
+    
+    func testDownloadTaskProperty() {
+        let task = downloader.downloadImageWithURL(NSURL(string: "1234")!, progressBlock: { (receivedSize, totalSize) -> () in
+
+            }) { (image, error, imageURL, originalData) -> () in
+        }
+        
+        XCTAssertNotNil(task, "The task should exist.")
+        XCTAssertEqual(task!.ownerDownloader, downloader, "The owner downloader should be correct")
+        XCTAssertEqual(task!.URL, NSURL(string: "1234"), "The request URL should equal.")
+    }
+    
+    func testCancelDownloadTask() {
+        
+        let expectation = expectationWithDescription("wait for downloading")
+        
+        let URLString = testKeys[0]
+        stubRequest("GET", URLString).andReturn(200).withBody(testImageData)
+        let URL = NSURL(string: URLString)!
+        
+        var progressBlockIsCalled = false
+        var completionBlockIsCalled = false
+        
+        let downloadTask = downloader.downloadImageWithURL(URL, progressBlock: { (receivedSize, totalSize) -> () in
+                progressBlockIsCalled = true
+            }) { (image, error, imageURL, originalData) -> () in
+                XCTAssertNotNil(error)
+                XCTAssertEqual(error!.code, NSURLErrorCancelled)
+                completionBlockIsCalled = true
+        }
+        
+        XCTAssertNotNil(downloadTask)
+        downloadTask!.cancel()
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(Double(NSEC_PER_SEC) * 0.09)), dispatch_get_main_queue()) { () -> Void in
+            expectation.fulfill()
+            XCTAssert(progressBlockIsCalled == false, "ProgressBlock should not be called since it is canceled.")
+            XCTAssert(completionBlockIsCalled == true, "CompletionBlock should be called with error.")
+        }
+        
+        waitForExpectationsWithTimeout(5, handler: nil)
+    }
+    
+    func testDownloadTaskNil() {
+        let downloadTask = downloader.downloadImageWithURL(NSURL(string: "")!, progressBlock: nil, completionHandler: nil)
+        XCTAssertNil(downloadTask)
     }
 }

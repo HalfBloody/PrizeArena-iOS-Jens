@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Kingfisher-Swift.h</key>
 		<data>
-		C430zuZ7xUqGTar6sicD6G9YRyQ=
+		bUXCyuQO3HIqmGCQGQEjc+ETIvw=
 		</data>
 		<key>Headers/Kingfisher.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8ZBZH09cY1wWLdi/9w5SO6SDUow=
+		etWuLTgawM/rwHLZhHW6kHcnJwo=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm.swiftdoc</key>
 		<data>
-		/Es0NsKqZ78HJVNOwXxroMAxqGM=
+		aN10N1Gkocmj1G8uisDZXuh+w44=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm.swiftmodule</key>
 		<data>
-		JOwq8ppmBXj8YxVBLDbTwpiwlRM=
+		dTcx5WUrcq0WcXM7KSp+xjSf+QI=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		FneyBKYPKOX5fsMeDqhMPXpicRE=
+		EowL5yWwQfFb8h/WOzL/60ZZ2fo=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Y8VsIRPkRphupdT/vxlZrelQotk=
+		CgnQAMhwkBPk+6dHreuSURO1f2s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,7 +41,7 @@
 	<dict>
 		<key>Headers/Kingfisher-Swift.h</key>
 		<data>
-		C430zuZ7xUqGTar6sicD6G9YRyQ=
+		bUXCyuQO3HIqmGCQGQEjc+ETIvw=
 		</data>
 		<key>Headers/Kingfisher.h</key>
 		<data>
@@ -49,19 +49,19 @@
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm.swiftdoc</key>
 		<data>
-		/Es0NsKqZ78HJVNOwXxroMAxqGM=
+		aN10N1Gkocmj1G8uisDZXuh+w44=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm.swiftmodule</key>
 		<data>
-		JOwq8ppmBXj8YxVBLDbTwpiwlRM=
+		dTcx5WUrcq0WcXM7KSp+xjSf+QI=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		FneyBKYPKOX5fsMeDqhMPXpicRE=
+		EowL5yWwQfFb8h/WOzL/60ZZ2fo=
 		</data>
 		<key>Modules/Kingfisher.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Y8VsIRPkRphupdT/vxlZrelQotk=
+		CgnQAMhwkBPk+6dHreuSURO1f2s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

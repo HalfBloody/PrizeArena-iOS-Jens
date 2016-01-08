@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Neon
 
 class PrizesViewController: UITableViewController {
     var prizes : [PrizeModel] = []
@@ -21,7 +22,7 @@ class PrizesViewController: UITableViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationItem.title = "Prizes"
         self.refreshControl = UIRefreshControl()
-        self.refreshControl?.addTarget(self, action: Selector("handleRefresh"), forControlEvents: .ValueChanged)
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: .ValueChanged)
         PrizesApiController.getPrizes() {
             result in
             print("completion handler")
@@ -59,19 +60,53 @@ class PrizesViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> PrizeCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("prizeCell", forIndexPath: indexPath) as! PrizeCell
         let prize = prizes[indexPath.row]
-        cell.contentView.backgroundColor = UIColor.clearColor()
         
-        let boxView : UIView = UIView(frame: CGRectMake(0, 10, self.view.frame.size.width, 90))
-        boxView.backgroundColor = Colors.lightFont
-        boxView.layer.masksToBounds = false
-        boxView.layer.cornerRadius = 2.0
-        boxView.layer.shadowOffset = CGSizeMake(-1, 1)
-        boxView.layer.shadowOpacity = 0.2
-        cell.contentView.addSubview(boxView)
-        cell.contentView.sendSubviewToBack(boxView)
-        cell.titleLabel.text = prize.title
-        cell.freeSlotsLabel.text = String(prize.free_slots) + " Available"
-        cell.totalSlotsLabel.text = "From " + String(prize.total_slots)
+        // Views
+        let cellContainer = UIView()
+        let imageContainer = UIView()
+        let contentContainer = UIView()
+        let newTitleLabel = UILabel()
+        let newFreeSlotsLabel = UILabel()
+        let newTotalSlotsLabel = UILabel()
+        
+        // View hierarchy
+        cell.addSubview(cellContainer)
+        cellContainer.addSubview(imageContainer)
+        cellContainer.addSubview(contentContainer)
+        contentContainer.addSubview(newTitleLabel)
+        contentContainer.addSubview(newFreeSlotsLabel)
+        contentContainer.addSubview(newTotalSlotsLabel)
+
+        // fonts
+        newTitleLabel.font = UIFont(name: "Aleo-Bold", size: FontSizes.large)
+        newFreeSlotsLabel.font = UIFont(name: "Aleo-Regular", size: FontSizes.medium)
+        newTotalSlotsLabel.font = UIFont(name: "Aleo-Regular", size: FontSizes.small)
+        
+        // Content
+        newTitleLabel.text = prize.title
+        newFreeSlotsLabel.text = String(prize.free_slots) + " Available"
+        newTotalSlotsLabel.text = "From " + String(prize.total_slots)
+        
+        // other formating
+        newTitleLabel.numberOfLines = 0
+        
+        // Layout
+        cellContainer.fillSuperview(left: 5, right: 5, top: 5, bottom: 5)
+        imageContainer.anchorAndFillEdge(.Left, xPad: 0, yPad: 0, otherSize: cellContainer.height)
+        contentContainer.anchorAndFillEdge(.Right, xPad: 0, yPad: 0, otherSize: cellContainer.width - cellContainer.height)
+        newTitleLabel.anchorInCorner(.TopLeft, xPad: 18, yPad: 18, width: contentContainer.width * 0.7, height: AutoHeight)
+        newFreeSlotsLabel.anchorInCorner(.BottomLeft, xPad: 18, yPad: 18, width: contentContainer.width * 0.45, height: AutoHeight)
+        newTotalSlotsLabel.alignAndFillWidth(align: .ToTheRightMatchingBottom, relativeTo: newFreeSlotsLabel, padding: 18, height: AutoHeight)
+        
+        // colors
+        newTitleLabel.textColor = Colors.darkFont
+        newFreeSlotsLabel.textColor = Colors.primary
+        newTotalSlotsLabel.textColor = Colors.lightFont
+        imageContainer.backgroundColor = Colors.lightFont
+        contentContainer.backgroundColor = Colors.secondary
+        cellContainer.backgroundColor = UIColor.clearColor()
+        cell.backgroundColor = UIColor.clearColor()
+        
         return cell
     }
     

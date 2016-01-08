@@ -31,6 +31,9 @@
 		A46DB6761C3EC15800F386CA /* aleo-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6721C3EC15800F386CA /* aleo-light-webfont.ttf */; };
 		A46DB6771C3EC15800F386CA /* aleo-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6731C3EC15800F386CA /* aleo-regular-webfont.ttf */; };
 		A46DB67A1C3ED77C00F386CA /* macbook_air.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A46DB6791C3ED77C00F386CA /* macbook_air.jpg */; };
+		A46DB67C1C3FDBF000F386CA /* Neon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46DB67B1C3FDBF000F386CA /* Neon.framework */; };
+		A46DB67D1C3FDC2300F386CA /* Neon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46DB67B1C3FDBF000F386CA /* Neon.framework */; };
+		A46DB67E1C3FDC2300F386CA /* Neon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46DB67B1C3FDBF000F386CA /* Neon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46E811E1C11CC4F00FA984C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */; };
 		A46E811F1C11CC5200FA984C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF21C11AA2300C29345 /* Kingfisher.framework */; };
 		A46E81201C11CC5700FA984C /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4405FF41C11AA2700C29345 /* MagicalRecord.framework */; };
@@ -63,6 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A46DB67E1C3FDC2300F386CA /* Neon.framework in Embed Frameworks */,
 				A46E81341C11CD6800FA984C /* MagicalRecord.framework in Embed Frameworks */,
 				A46E812A1C11CD2F00FA984C /* Alamofire.framework in Embed Frameworks */,
 				A46E81371C11CD7300FA984C /* ObjectMapper.framework in Embed Frameworks */,
@@ -110,6 +114,7 @@
 		A46DB6721C3EC15800F386CA /* aleo-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aleo-light-webfont.ttf"; sourceTree = "<group>"; };
 		A46DB6731C3EC15800F386CA /* aleo-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aleo-regular-webfont.ttf"; sourceTree = "<group>"; };
 		A46DB6791C3ED77C00F386CA /* macbook_air.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = macbook_air.jpg; path = Lib/Images/macbook_air.jpg; sourceTree = "<group>"; };
+		A46DB67B1C3FDBF000F386CA /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neon.framework; path = Carthage/Build/iOS/Neon.framework; sourceTree = "<group>"; };
 		A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		A46E81231C11CC6100FA984C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		A46E81281C11CD2F00FA984C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -136,11 +141,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46DB67D1C3FDC2300F386CA /* Neon.framework in Frameworks */,
 				A46E811E1C11CC4F00FA984C /* AlamofireObjectMapper.framework in Frameworks */,
 				A46E81271C11CC6B00FA984C /* SwiftyJSON.framework in Frameworks */,
 				A46E81361C11CD7300FA984C /* ObjectMapper.framework in Frameworks */,
 				A46E811F1C11CC5200FA984C /* Kingfisher.framework in Frameworks */,
 				A4AE7C951C1483780053CBED /* Realm.framework in Frameworks */,
+				A46DB67C1C3FDBF000F386CA /* Neon.framework in Frameworks */,
 				A4AE7C941C1483710053CBED /* RealmSwift.framework in Frameworks */,
 				A46E81201C11CC5700FA984C /* MagicalRecord.framework in Frameworks */,
 				A46E81291C11CD2F00FA984C /* Alamofire.framework in Frameworks */,
@@ -258,6 +265,7 @@
 				A46F383F1C15BBD000313772 /* FBSDKLoginKit.framework */,
 				A46F383D1C15BBCA00313772 /* FBSDKCoreKit.framework */,
 				A46E81231C11CC6100FA984C /* Realm.framework */,
+				A46DB67B1C3FDBF000F386CA /* Neon.framework */,
 				A46E811D1C11CC4F00FA984C /* AlamofireObjectMapper.framework */,
 				A4405FFE1C11AA4100C29345 /* SwiftyJSON.framework */,
 				A4405FFC1C11AA3F00C29345 /* SugarRecord.framework */,

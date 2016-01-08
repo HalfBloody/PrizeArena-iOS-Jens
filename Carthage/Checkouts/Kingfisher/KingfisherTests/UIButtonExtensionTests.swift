@@ -47,6 +47,7 @@ class UIButtonExtensionTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         button = UIButton()
         KingfisherManager.sharedManager.downloader = ImageDownloader(name: "testDownloader")
+        cleanDefaultCache()
     }
     
     override func tearDown() {
@@ -67,6 +68,9 @@ class UIButtonExtensionTests: XCTestCase {
         let URL = NSURL(string: URLString)!
         
         var progressBlockIsCalled = false
+        
+        cleanDefaultCache()
+        
         button.kf_setImageWithURL(URL, forState: UIControlState.Highlighted, placeholderImage: nil, optionsInfo: nil, progressBlock: { (receivedSize, totalSize) -> () in
             progressBlockIsCalled = true
         }) { (image, error, cacheType, imageURL) -> () in
@@ -77,7 +81,7 @@ class UIButtonExtensionTests: XCTestCase {
             XCTAssert(image! == testImage, "Downloaded image should be the same as test image.")
             XCTAssert(self.button.imageForState(UIControlState.Highlighted)! == testImage, "Downloaded image should be already set to the image for state")
             XCTAssert(self.button.kf_webURLForState(UIControlState.Highlighted) == imageURL, "Web URL should equal to the downloaded url.")
-            XCTAssert(cacheType == .None, "cacheType should be .None since the image was just downloaded.")
+            XCTAssert(cacheType == .None, "The cache type should be none here. This image was just downloaded. But now is: \(cacheType)")
         }
         waitForExpectationsWithTimeout(5, handler: nil)
     }
